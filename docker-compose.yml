@@ -1,0 +1,14 @@
+version: "3"
+services:
+ dc-doh:
+  container_name: dc-doh-app
+  build: ./app
+  image: dnscrypt-doh-docker
+  networks:
+   - default
+  ports:
+   - '127.0.0.1:53:53/udp'
+   - '127.0.0.1:53:53/tcp'
+  restart: always
+  volumes:
+   - './config-dnscrypt-proxy:/opt/dnscrypt-proxy/config'
