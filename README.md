@@ -12,3 +12,4 @@ Vanilla DoH Container poviding a simple DoH/DNSCrypt Resolver using the DNSCRypt
 *Usage*
 * You MUST change the listening interface on the config file to something other than 127.0.0.1 which is unreachable using the docker port forwarding mechanism
 * Afterwards the dnscrypt-proxy instance should be reachable via port 53 (tcp+udp) of the hosts localhost
+* All activated log files will appear in the _config-dnscrypt-proxy_ folder outside of the container, so they are viewable from the host
